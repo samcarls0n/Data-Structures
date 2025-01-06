@@ -7,10 +7,10 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
-    def printList():
+    def printList(self):
         curr = self.head
         while curr:
-            print(curr.data,end=‘’)
+            print(curr.data,end=" ")
             curr = curr.next
         print()
 
@@ -19,7 +19,7 @@ class LinkedList:
         newest.next = self.head
         self.head = newest
 
-     def insertAtEnd(self, data):
+    def insertAtEnd(self, data):
         newest = Node(data)
         if self.head is None:
             self.head = newest
@@ -29,12 +29,12 @@ class LinkedList:
             curr = curr.next
         curr.next = newest
 
-     def deleteFromFront(self):
+    def deleteFromFront(self):
         if self.head is None:
             return
         self.head = self.head.next
 
-     def deleteFromEnd(self):
+    def deleteFromEnd(self):
         if self.head is None:
             return
         if self.head.next is None:
@@ -45,7 +45,7 @@ class LinkedList:
             curr = curr.next
         curr.next = None
      
-     def search(self, value):
+    def search(self, value):
         curr = self.head
         while curr:
             if curr.data == value:
