@@ -9,9 +9,13 @@ class Stack:
         self._items.append(item)
 
     def pop(self):
+        if self.is_empty():
+            return "stack is empty"
         return self._items.pop()
 
     def peek(self):
+        if self.is_empty():
+            return "stack is empty"
         return self._items[-1]
 
     def size(self):
